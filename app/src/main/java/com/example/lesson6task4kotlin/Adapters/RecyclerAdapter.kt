@@ -13,7 +13,7 @@ import com.example.lesson6task4kotlin.R
 
 class RecyclerAdapter(private var context: Context?, private var user: ArrayList<User>?):RecyclerView.Adapter<RecyclerAdapter.UserViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerAdapter.UserViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
        val view = LayoutInflater.from(context).inflate(R.layout.item_user_list, parent,false)
     return UserViewHolder(view)
     }
@@ -29,8 +29,7 @@ class RecyclerAdapter(private var context: Context?, private var user: ArrayList
         }
         holder.tv_lastName.setOnClickListener( View.OnClickListener() {
             val user1 = User("temur")
-            onClick(user1)
-    })
+            onClick(user1) })
     }
 
     override fun getItemCount(): Int {
